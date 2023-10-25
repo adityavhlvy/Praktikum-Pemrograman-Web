@@ -1,0 +1,155 @@
+﻿<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KitaCoding</title>
+
+<style>
+  
+  nav {
+    background-color: dodgerblue;
+    margin: 0;
+    padding: 0;
+    /* display: flex; */
+    align-items: center;
+    text-shadow: 0 0 5px black;
+    color: white;
+    border: 1px solid red;
+  }  
+  
+  h1{
+    font-size: 32px;
+    border: 1px solid red;
+  }
+  ul {
+    display: flex;
+    margin-left: auto;
+    text-decoration: none;
+    border: 1px solid red;
+  }
+  
+  li{
+    margin-left: 10px;
+    list-style: none;
+    border: 1px solid red;
+  }
+
+  li a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  /* Set height of body and the document to 100% to enable "full page tabs" */
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+  }
+
+  /* Style tab links */
+  .tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 20%;
+  }
+
+  .tablink:hover {
+    background-color: #777;
+  }
+  /* Style the tab content (and add height:100% for full page content) */
+  .tabcontent {
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+  }
+
+  #Home {background-color: grey;}
+  #HTML {background-color: green;}
+  #CPP {background-color: blue;}
+  #Java {background-color: orange;}
+  #Python {background-color: violet;   
+
+}
+
+</style>
+
+</head>
+<body>
+    
+  <nav>
+    <h1>KitaCoding</h1>
+    <p>Coba aja belajar dulu!!!</p>
+    
+    <button class="tablink" onclick="openPage('Home', this, 'grey')" id="defaultOpen">Home</button>
+    <button class="tablink" onclick="openPage('HTML', this, 'green')">HTML</button>
+    <button class="tablink" onclick="openPage('CPP', this, 'blue')">C++</button>
+    <button class="tablink" onclick="openPage('Java', this, 'orange')">Java</button>
+    <button class="tablink" onclick="openPage('Python', this, 'violet')">Python</button>
+  </nav>
+
+
+
+  <div id="Home" class="tabcontent">
+      <h3>Home</h3>
+      <p>This is homepage</p>
+  </div>
+    
+  <div id="HTML" class="tabcontent">
+    <h3>HTML</h3>
+    <p>This is HTML page</p>
+  </div>
+    
+  <div id="CPP" class="tabcontent">
+    <h3>C++</h3>
+    <p>This is C++ page</p>
+  </div>
+    
+  <div id="Java" class="tabcontent">
+    <h3>Java</h3>
+    <p>This is Java page</p>
+  </div>
+    
+  <div id="Python" class="tabcontent">
+    <h3>Python</h3>
+    <p>This is Python page</p>
+  </div>
+    
+  <script>
+    function openPage(pageName, elmnt, color) {
+    // Hide all elements with class="tabcontent" by default */
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+  
+    // Remove the background color of all tablinks/buttons
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "";
+    }
+  
+    // Show the specific tab content
+    document.getElementById(pageName).style.display = "block";
+  
+    // Add the specific color to the button used to open the tab content
+    elmnt.style.backgroundColor = color;
+  }
+  
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+  </script>
+    
+
+
+    
+</body>
+</html>
