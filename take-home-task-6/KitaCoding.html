@@ -1,0 +1,153 @@
+﻿<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KitaCoding</title>
+
+    <style>
+      body,html {
+        background-image: url(https://images.wallpapersden.com/image/wxl-rick-and-morty-portal_67218.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        /* background-color: black; */
+      }
+
+      nav {
+        margin: 0;
+        padding: 0;
+        text-shadow: 0 0 5px darkcyan;
+        color: white;
+        /* border: 1px solid red; */
+      }
+
+      h1 {
+        background-color: black;
+        margin: 0;
+        padding: 0; 
+        font-size: 38px;
+        color: greenyellow;
+        /* border: 1px solid red; */
+      }
+
+      .tablink {
+        background-color: black;
+        color: white;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        text-align: center;
+        padding: 5px 0px 5px 0px;
+        font-size: 18px;
+        width: 20%;
+        /* border: 1px solid red; */
+      }
+
+      .start{
+        text-align: left;
+      }
+
+      .end{
+        text-align: right;
+      }
+
+      .tablink:hover {
+        background-color: grey;
+      }
+
+      .artikel-home .slogan {
+        color: white;
+        /* font-family:; */
+        font-size: 40px;
+        text-align: center;
+        margin: 200px 0px 0px 0px;
+      }
+
+      .artikel-home .search {
+        margin: 20px 0px 0px 0px;
+        text-align: center;
+      }
+
+      .artikel-home button{
+        width: 6rem;
+        height: 2.5rem;
+        border-radius: 0px 10px 10px 0px;
+      }
+
+      input[type=text] {
+        width: 15rem;
+        height: 2.5rem;
+        border-radius: 10px 0px 0px 10px;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+      }
+
+      /* When the input field gets focus, change its width to 100% */
+      input[type=text]:focus {
+        width: 50%;
+      }
+
+      footer {
+        width: 100%;
+        font-size: 14px;
+        display: block;
+        position: fixed;
+        margin: 0;
+        padding: 10px 0px 0px 0px;
+        background-color: greenyellow;
+        bottom: 0;
+        /* border: 1px solid red; */
+      }
+
+      footer .social-media{
+        display: block;
+        float: left;
+        margin: 0px 10px 0px 0px;
+        /* border: 1px solid red; */
+      }
+
+      footer .about {
+        float: right;
+        margin: 0px 10px 10px 0px;
+        /* border: 1px solid red; */
+      }
+
+      footer li {
+        list-style: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <h1>KitaCoding</h1>
+      <button class="tablink start" id="defaultOpen">Home</button>
+      <button class="tablink">HTML</button>
+      <button class="tablink">C++</button>
+      <button class="tablink">Java</button>
+      <button class="tablink end">Python</button>
+    </nav>
+
+    <div class="artikel-home">
+      <h2 class="slogan">Coba Aja Belajar Dulu</h2>
+
+      <form action class="search">
+        <input type="text" name="search" placeholder="  Search..."/>
+        <button>Search</button>
+      </form>
+    </div>
+
+    <footer>
+      <ul>
+        <li>
+          <p>Social Media</p><br>
+          <a href class="social-media">Instagram</a>
+          <a href class="social-media">Youtube</a>
+        </li>
+      </ul>
+      <a href class="about">About</a>
+    </footer>
+  </body>
+</html>

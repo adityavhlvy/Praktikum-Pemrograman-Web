@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum Web</title>
+
+    <style>
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: 0.3s ease-out;
+            backdrop-filter: blur(8px) brightness(1.2);
+            -webkit-backdrop-filter: blur(8px) brightness(1.2);
+            text-shadow: 0 0 5px black;
+            color: white;
+        }
+
+        h1 {
+            font-size: 28PX;
+            transition: 0.3s ease-out;
+            backdrop-filter: blur(8px) brightness(1.2);
+            -webkit-backdrop-filter: blur(8px) brightness(1.2);
+            text-shadow: 0 0 5px black;
+            color: white;
+        }
+
+        h1.title {
+            display: flex;
+            padding: 0px 0px 0px 5px;
+        }
+
+        .artikel_home {
+            margin-top: 50px;
+        }
+
+        .tablinkButton {
+            display: flex;
+        }
+
+        .tablink {
+            padding: 5px 0px 5px 0px;
+            font-size: 12px;
+            width: 10vw;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            color: black;
+            background-color: white;
+        }
+
+        .tablink:hover {
+            background-color: whitesmoke;
+        }
+
+        .Pemesanan{
+            display: flex;
+            justify-content: center;
+        }
+
+        .foodOrder, 
+        .foodReceipt {
+            display: flex;
+            margin: 50px 0px 0px 0px;
+            border: 5px solid blueviolet;
+            background-color: dodgerblue; 
+            width: 50vw;
+        }
+
+        .Receipt{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <h1 class="title">aditya.</h1>
+        <div class="tablinkButton">
+            <button class="tablink" id="defaultOpen">Home</button>
+            <button class="tablink">Project</button>
+            <button class="tablink">About</button>
+        </div>
+    </nav>
+    <div class="Pemesanan">
+        <div class="foodOrder">
+            <form name="pesan" id="pesan" onsubmit="calculatePrice(event)">
+                Makanan: <select name="subject" id="makanan">
+                    <option value="500">Unta Mercon</option>
+                    <option value="50">Kudanil Asam Manis</option>
+                    <option value="5">Kerupuk Melarat</option>
+                    <option value="" selected disabled></option>
+                  </select>
+                  <br><br>
+                Jumlah: <input type="number" class="jumlah">
+    
+                  <br><br>
+                Voucher: <input type="text" class="voucher"> 
+                <button onclick="calculatePrice()">Submit</button>
+
+                </form>
+        </div>
+    </div>
+
+
+    <div class="Receipt">
+        <div class="foodReceipt">
+            Nama Pesanan    :
+            <br>
+            Jumlah Pesanan  :
+            <br>
+            Total Harga Sebelum Diskon :
+            <br>
+            Total Diskon    :
+            <br>
+            Total Harga     :
+            <br>
+        </div>
+    </div>
+    
+    <script>
+    function calculatePrice() {
+        event.preventDefault();
+        
+        var makanan = document.getElementById("makanan");
+        var jumlah = document.querySelector(".jumlah").value;
+        var voucher = document.querySelector(".voucher").value;
+
+        var hargaMakanan = parseFloat(makanan.value);
+        var totalHarga = hargaMakanan * parseFloat(jumlah);
+
+        var diskon = 0;
+        if (voucher === "ADITGANTENG") {
+            diskon = totalHarga * 0.9;
+        }
+        else if (voucher === "ADITJELEK") {
+            diskon = totalHarga * -0.1;
+        }
+
+        var totalDiskon = diskon.toFixed(2);
+        var totalHargaSetelahDiskon = (totalHarga - diskon).toFixed(2);
+
+        var receipt = document.querySelector(".foodReceipt");
+        receipt.innerHTML = "Nama Pesanan   : " + makanan.options[makanan.selectedIndex].text + "<br>" +
+                            "Jumlah Pesanan : " + jumlah + "<br>" +
+                            "Total Harga Sebelum Diskon : " + totalHarga + " K IDR" + "<br>" +
+                            "Total Diskon   : " + totalDiskon + " K IDR" +"<br>" +
+                            "Total Harga    : " + totalHargaSetelahDiskon + " K IDR" + "<br>";
+    }
+</script>
+
+</body>
+</html>
