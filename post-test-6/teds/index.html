@@ -1,0 +1,86 @@
+﻿</head>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Post-Test</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <header>
+        <h1><span class="span">Arya</span> Ashari</h1>
+        <hr />
+        <br>
+    </header>
+
+    <main>
+        <h1>Pemesanan Makanan</h1>
+        <form action=""></form>
+        <label for="makanan">Makanan: </label>
+        <select name="" id="">
+            <option value=""></option>
+            <option value="12000">Bubur Ayam</option>
+            <option value="10000">Ayam Goreng</option>
+            <option value="13000">ketoprak</option>
+            <option value="15000">Nasi Goreng</option>
+        </select>
+        <label for="jumlah">Jumlah</label>
+        <input type="text">
+        <label for="jumlah">Voucher</label>
+        <input type="text">
+        <br>
+        <button>
+            input
+        </button>
+    </main>
+
+    <main>
+        <h1>Struk belanja</h1>
+        <p>Nama Pesanan: <span id="pesanan"></span></p>
+        <p>Jumlah Pesanan: <span id="jumlah"></span></p>
+        <p>Total Diskon: <span id="voucher"></span></p>
+        <p>Total Harga: <span id="total"></span></p>
+    </main>
+
+    <footer>
+        <p>© 2023 Arya Ashari</p>
+    </footer>
+</body>
+
+<script>
+    const foodSelect = document.querySelector('select');
+    const quantityInput = document.querySelector('input[type="text"]');
+    const voucherInput = document.querySelectorAll('input[type="text"]')[1];
+    const pesananSpan = document.getElementById('pesanan');
+    const jumlahSpan = document.getElementById('jumlah');
+    const voucherSpan = document.getElementById('voucher');
+    const totalSpan = document.getElementById('total');
+
+    function calculateDiscount() {
+        const foodPrice = parseInt(foodSelect.value);
+        const quantity = parseInt(quantityInput.value);
+        const inputText = voucherInput.value;
+        let discount = 0;
+
+        if (inputText === 'ADITGANTENG') {
+            discount = 10;
+        }
+
+        const totalAmount = foodPrice * quantity;
+        const discountAmount = (discount / 100) * totalAmount;
+        const finalTotal = totalAmount - discountAmount;
+
+        pesananSpan.textContent = foodSelect.options[foodSelect.selectedIndex].text;
+        jumlahSpan.textContent = quantity;
+        voucherSpan.textContent = discountAmount;
+        totalSpan.textContent = finalTotal;
+    }
+    const button = document.querySelector('button');
+    button.addEventListener('click', calculateDiscount);
+
+</script>
+
+
+</html>
