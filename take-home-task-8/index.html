@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KitaCoding</title>
+    <link type="text/css" href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav>
+      <h1 class="title">KitaCoding</h1>
+      <button onclick="toggleDarkMode()" class="dark-mode-button">Dark Mode</button>
+      <button onclick="openModal()" class="login-button">Login</button>
+      <div id="id01" class="modal">
+        <span onclick="closeModal()" class="close" title="Close Modal"
+          >&times;</span
+        >
+        <form class="modal-content animate" action="/action_page.php">
+          <div class="imgcontainer">
+            <img src="img-avatar-png-2.png" alt="Avatar" class="avatar" />
+          </div>
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input
+              type="text"
+              placeholder="Enter Username"
+              name="uname"
+              required
+            />
+            <label for="psw"><b>Password</b></label>
+            <input
+              type="password"
+              placeholder="Enter Password"
+              name="psw"
+              required
+            />
+            <button type="submit">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember" />
+              Remember me
+            </label>
+          </div>
+          <div class="container" style="background-color: #f1f1f1">
+            <button type="button" onclick="closeModal()" class="cancelbtn">
+              Cancel
+            </button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+        </form>
+      </div>
+      <div class="top-nav"></div>
+    </nav>
+    <div class="artikel-home">
+      <h2 class="slogan">Coba Aja Belajar Dulu</h2>
+      <form action class="search">
+        <input type="text" class="search" placeholder="Search..." />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+    <footer>
+      <ul>
+        <li>
+          <p>Social Media</p>
+          <a href="#" class="social-media"></a>
+        </li>
+      </ul>
+      <a href="#" class="about">About</a>
+    </footer>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
