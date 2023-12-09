@@ -1,46 +1,4 @@
-﻿const navigationLinks = [
-  "Home",
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "Python",
-  "PHP",
-  "SQL",
-];
-
-function createNavigation() {
-  const topNav = document.querySelector(".top-nav");
-
-  navigationLinks.forEach((link) => {
-    const anchor = document.createElement("a");
-    anchor.href = "#";
-    anchor.textContent = link;
-    topNav.appendChild(anchor);
-  });
-}
-
-const socialMediaLinks = [
-  { name: "Instagram", url: "#" },
-  { name: "Youtube", url: "#" },
-];
-
-function createSocialMediaLinks() {
-  const socialMediaList = document.querySelector("footer .social-media");
-
-  socialMediaLinks.forEach((socialMedia, index) => {
-    const anchor = document.createElement("a");
-    anchor.href = socialMedia.url;
-    anchor.textContent = socialMedia.name;
-
-    if (index < socialMediaLinks.length - 1) {
-      anchor.style.marginRight = "10px";
-    }
-
-    socialMediaList.appendChild(anchor);
-  });
-}
-
-document.addEventListener("DOMContentLoaded", function () {
+﻿document.addEventListener("DOMContentLoaded", function () {
   createNavigation();
   createSocialMediaLinks();
 
@@ -89,7 +47,6 @@ function toggleDarkMode() {
   const isDarkMode = body.classList.contains("dark-mode");
   localStorage.setItem("darkMode", isDarkMode);
 }
-
 
 document.addEventListener("DOMContentLoaded", function () {
   const isDarkMode = localStorage.getItem("darkMode");

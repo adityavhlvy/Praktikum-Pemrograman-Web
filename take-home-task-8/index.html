@@ -9,16 +9,30 @@
   <body>
     <nav>
       <h1 class="title">KitaCoding</h1>
-      <button onclick="toggleDarkMode()" class="dark-mode-button">Dark Mode</button>
-      <button onclick="openModal()" class="login-button">Login</button>
+      <button onclick="toggleDarkMode()" class="dark-mode-button">
+        Dark Mode
+      </button>
+
+      <button
+        onclick="document.getElementById('id01').style.display='block'"
+        class="login-button"
+      >
+        Login
+      </button>
+
       <div id="id01" class="modal">
-        <span onclick="closeModal()" class="close" title="Close Modal"
+        <span
+          onclick="document.getElementById('id01').style.display='none'"
+          class="close"
+          title="Close Modal"
           >&times;</span
         >
+
         <form class="modal-content animate" action="/action_page.php">
           <div class="imgcontainer">
             <img src="img-avatar-png-2.png" alt="Avatar" class="avatar" />
           </div>
+
           <div class="container">
             <label for="uname"><b>Username</b></label>
             <input
@@ -27,6 +41,8 @@
               name="uname"
               required
             />
+            <br />
+
             <label for="psw"><b>Password</b></label>
             <input
               type="password"
@@ -34,38 +50,62 @@
               name="psw"
               required
             />
-            <button type="submit">Login</button>
+            <br />
             <label>
               <input type="checkbox" checked="checked" name="remember" />
               Remember me
             </label>
+
+            <br /><button type="submit">Login</button>
           </div>
+
           <div class="container" style="background-color: #f1f1f1">
-            <button type="button" onclick="closeModal()" class="cancelbtn">
+            <button
+              type="button"
+              onclick="document.getElementById('id01').style.display='none'"
+              class="cancelbtn"
+            >
               Cancel
             </button>
             <span class="psw">Forgot <a href="#">password?</a></span>
           </div>
         </form>
       </div>
-      <div class="top-nav"></div>
+
+      <div class="top-nav">
+        <a href="">HTML</a>
+        <a href="">CSS</a>
+        <a href="">JavaScript</a>
+        <a href="">PHP</a>
+        <a href="">C++</a>
+        <a href="">Java</a>
+        <a href="">Python</a>
+      </div>
     </nav>
     <div class="artikel-home">
       <h2 class="slogan">Coba Aja Belajar Dulu</h2>
-      <form action class="search">
+      <form action="" class="search">
         <input type="text" class="search" placeholder="Search..." />
         <button type="submit">Search</button>
       </form>
     </div>
-    <footer>
-      <ul>
-        <li>
-          <p>Social Media</p>
-          <a href="#" class="social-media"></a>
-        </li>
-      </ul>
-      <a href="#" class="about">About</a>
-    </footer>
+    <div class="footer">
+      <div class="footer-social-media">
+        <h3>Social Media</h3>
+        <ul>
+          <li>Instagram</li>
+          <li>Youtube</li>
+        </ul>
+      </div>
+      <div class="footer-learn-more">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa pariatur
+          ut dolores doloremque magnam expedita quod? Minus expedita nostrum
+          molestias inventore cupiditate cumque saepe architecto voluptates,
+          libero maxime, reprehenderit odit.
+        </p>
+      </div>
+    </div>
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
