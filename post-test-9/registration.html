@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Registration</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+    <style type="text/css">
+      nav {
+        float: right;
+        word-spacing: 30px;
+        padding: 20px;
+      }
+      nav li {
+        display: inline-block;
+        line-height: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="logo">
+          <img src="UP RGB.png" />
+          <h1 style="color: black">ONLINE LIBRARY MANAGEMENT SYSTEM</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="books.html">BOOKS</a></li>
+            <li><a href="login.html">LOGIN</a></li>
+          </ul>
+        </nav>
+      </header>
+  <body>
+    <section>
+      <div class="reg_img">
+        <br />
+        <br /><br />  
+        <div class="box2">
+          <h1
+            style="
+              text-align: center;
+              font-size: 35px;
+              font-family: Lucida Console;
+            "
+          >
+            Library Management System
+          </h1>
+          <br />
+          <h1 style="text-align: center; font-size: 25px">
+            User Registration Form
+          </h1>
+          <br />
+          <form name="Registration" action="registration.php" method="post">
+            <br /><br />
+            <div class="login">
+              <input
+                type="text"
+                name="name"
+                placeholder="Surename"
+                required=""
+              />
+              <br /><br />
+              <input
+                type="text"
+                name="username"
+                placeholder="Username"
+                required=""
+              />
+              <br /><br />
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                required=""
+              />
+              <br /><br />
+              <input
+                type="text"
+                name="id_number"
+                placeholder="ID Number"
+                required=""
+              /><br /><br />
+              <input
+                type="text"
+                name="email"
+                placeholder="Email"
+                required=""
+              /><br /><br />
+              <button id="signupButton">Sign Up</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <br>
+    </section>
+    <footer>
+      <p style="color: white; text-align: center">
+        Instagram <br />
+        www.uper.com
+      </p>
+    </footer>
+    
+    <script src="registration.js"> </script>
+
+  </body>
+</html>
