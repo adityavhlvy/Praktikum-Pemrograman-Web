@@ -1,0 +1,9 @@
+﻿.custom-navbar {
+    margin-top: -1.4rem;
+}
+
+.custom-form {
+    display: grid;
+    align-items:end;
+    justify-items:end;
+}
